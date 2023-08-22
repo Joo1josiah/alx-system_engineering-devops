@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | sed -E '/^\.{1,2}$/s|^|./|' | tr '\n' ', ' | sed 's/, $//'
+ls -a | sed -E '/^\.{1,2}$/s|^|&|' | tr -d '\n' | sed 's/ /, /g'
